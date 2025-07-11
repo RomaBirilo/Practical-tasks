@@ -76,7 +76,7 @@ void DrawFigure::mouseReleaseEvent(QMouseEvent *event)
             currentFigure = nullptr;
         }
     }
-   else if(shapeType==Rectangle)
+    else if(shapeType==Rectangle)
     {
         if(event->button()==Qt::LeftButton && currentFigure)
         {

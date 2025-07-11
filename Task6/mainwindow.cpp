@@ -162,19 +162,19 @@ void MainWindow::loadFigures()
         if(figureObject["type"].toString()=="Line")
         {
             scene->addLine(QLineF(figureObject["x1"].toDouble(),figureObject["y1"].toDouble(),
-            figureObject["x2"].toDouble(),figureObject["y2"].toDouble()), QPen(QColor(figureObject["Pen color"].toString()),2));
+                                  figureObject["x2"].toDouble(),figureObject["y2"].toDouble()), QPen(QColor(figureObject["Pen color"].toString()),2));
         }
         else if (figureObject["type"].toString()=="Rectangle")
         {
             scene->addRect(QRectF(figureObject["x"].toDouble(),figureObject["y"].toDouble(),
-            figureObject["width"].toDouble(),figureObject["height"].toDouble() ),QPen(QColor(figureObject["Pen color"].toString()),2),
-            QBrush(QColor(figureObject["Brush color"].toString())));
+                                  figureObject["width"].toDouble(),figureObject["height"].toDouble() ),QPen(QColor(figureObject["Pen color"].toString()),2),
+                           QBrush(QColor(figureObject["Brush color"].toString())));
         }
         else if(figureObject["type"].toString()=="Ellipse")
         {
             scene->addEllipse(QRectF(figureObject["x"].toDouble(),figureObject["y"].toDouble(),
-            figureObject["width"].toDouble(),figureObject["height"].toDouble() ),QPen(QColor(figureObject["Pen color"].toString()),2),
-            QBrush(QColor(figureObject["Brush color"].toString())));
+                                     figureObject["width"].toDouble(),figureObject["height"].toDouble() ),QPen(QColor(figureObject["Pen color"].toString()),2),
+                              QBrush(QColor(figureObject["Brush color"].toString())));
         }
     }
 
